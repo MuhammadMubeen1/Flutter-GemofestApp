@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222607685594",
+    "project_id": "gemofest-51a62",
+    "storage_bucket": "gemofest-51a62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222607685594:android:b4fdeb7b36c2d5ec1ef2e3",
+        "android_client_info": {
+          "package_name": "com.example.gamefestival"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-JnuhNZlmeTrUAMwsDhgWcSVfUzN9_bM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
