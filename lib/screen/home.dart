@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gamefestival/screen/notification.dart';
+import 'package:get/get.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,6 +16,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: const Color(0xff28293F),
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.white),
           elevation: 0,
           backgroundColor: const Color(0xff28293F),
           title: Row(
@@ -35,13 +37,12 @@ class _HomeState extends State<Home> {
                   MaterialPageRoute(builder: (context) => (Notifications())),
                 );
               },
-              icon: const Icon(Icons.notifications_outlined),
+              icon: const Icon(
+                Icons.notifications_outlined,
+                size: 30,
+                color: Colors.white,
+              ),
             ),
-
-            // IconButton(
-            //   onPressed: () {},
-            //   icon: const Icon(Icons.menu),
-            // ),
           ],
         ),
         drawer: Drawer(
@@ -56,11 +57,11 @@ class _HomeState extends State<Home> {
                   children: [
                     Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           backgroundImage: AssetImage("assets/profile.png"),
                           radius: 30,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Column(
@@ -73,7 +74,7 @@ class _HomeState extends State<Home> {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            Text(
+                            const Text(
                               'Biker',
                               style: TextStyle(
                                   color: Colors.white54,
@@ -84,15 +85,15 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    Icon(
+                    const Icon(
                       Icons.settings_outlined,
                       color: Color(0xFFFFC400),
                     )
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(15.0),
+              const Padding(
+                padding: EdgeInsets.all(15.0),
                 child: Divider(
                   height: 2,
                   color: Colors.grey,
@@ -113,7 +114,7 @@ class _HomeState extends State<Home> {
               //   ),
               //   decoration: BoxDecoration(color: Color(0xFFFFC400)),
               // ),
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.save_outlined,
                   color: Colors.white,
@@ -123,7 +124,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.language_outlined,
                   color: Colors.white,
@@ -137,7 +138,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Color(0xFFFFC400)),
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.support_outlined,
                   color: Colors.white,
@@ -147,7 +148,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.question_answer_outlined,
                   color: Colors.white,
@@ -157,7 +158,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.help_outline,
                   color: Colors.white,
@@ -167,7 +168,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.logout_outlined,
                   color: Color(0xFFFFC400),
@@ -179,6 +180,154 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
+        ),
+        body: SingleChildScrollView(
+          child: Column(children: [
+            const SizedBox(
+              height: 20,
+            ),
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/fotball.jpg',
+                  width: 500.0,
+                  height: 180.0,
+                  colorBlendMode: BlendMode.darken,
+                  color: Colors.black.withOpacity(0.4),
+                  fit: BoxFit.cover,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 100, left: 10),
+                  child: Text(
+                    "23 Aug 2023",
+                    style: TextStyle(
+                        color: Color(0xFFFFC400),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 125, left: 10),
+                  child: Text(
+                    "Ronaldo Beats the world best\nteam in FIFA 2023",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: 327.0,
+              height: 74.0,
+              decoration: BoxDecoration(
+                borderRadius:
+                    BorderRadius.circular(20.0), // Adjust the radius as needed
+                //color: Colors.black.withOpacity(0.4),
+                border: Border.all(
+                  color: Color(0xFFFFC400),
+                  width: 2.0,
+                ),
+              ),
+              child: const Center(
+                child: Text(
+                  "Champions keep playing until \n they get it right.",
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(right: 270),
+              child: Text(
+                "Daily  Activity ",
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Container(
+                width: double.infinity,
+                height: 120,
+                child: ListView.builder(
+                    physics: const ScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 4,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                          height: 150,
+                          width: 150,
+                          margin: const EdgeInsets.all(8),
+                          color: Color(0xff383838),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Image.asset(
+                                  'assets/moterbyke.png',
+                                  height: 50,
+                                  width: 50,
+                                ),
+                              ),
+                              const Text(
+                                'Exercise \n 30 mint ',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10),
+                              ),
+                            ],
+                          ));
+                    }),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 20, top: 10),
+              child: Row(
+                children: [
+                  Text(
+                    "Upcoming Events",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 200,
+                  ),
+                  Text(
+                    "View All ",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 120,
+              child: ListView.builder(
+                  physics: const ScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 4,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xff383838),
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust the radius as needed
+                        ),
+                        height: 250,
+                        width: 350,
+                        margin: const EdgeInsets.all(8),
+                        child: Image.asset(
+                          'assets/image1.png',
+                          fit: BoxFit.fill,
+                        ));
+                  }),
+            ),
+          ]),
         ),
       ),
     );

@@ -9,7 +9,7 @@ class clubsChat extends StatefulWidget {
 }
 
 class _clubsChatState extends State<clubsChat> {
-  final List<String> items = List.generate(100, (index) => 'Item ${index + 1}');
+  final List<String> items = List.generate(12, (index) => 'Item ${index + 1}');
   // List<String> items = ['1,2 ,3 ,4,5'];
 
   List<String> names = [
@@ -46,7 +46,7 @@ class _clubsChatState extends State<clubsChat> {
               style: TextStyle(color: Colors.grey),
             ),
             leading: CircleAvatar(
-              backgroundImage: AssetImage('assets/volleyz.jpg'),
+              backgroundImage: AssetImage('assets/volley.jpg'),
             ),
             trailing: Text(
               '3:44 PM',

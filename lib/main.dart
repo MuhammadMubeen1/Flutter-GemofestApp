@@ -17,8 +17,13 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        // Set the default icon color to white
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
       debugShowCheckedModeBanner: false,
-      home: AuthenticationWrapper(),
+      home: BottomNavBar(),
+      // AuthenticationWrapper(),
     );
   }
 }

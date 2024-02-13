@@ -63,8 +63,8 @@ class _communityState extends State<community> {
                   decoration: InputDecoration(
                       // filled: true,
                       // fillColor: Colors.grey.shade800,
-                      prefixIcon: Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                      prefixIcon: const Padding(
+                        padding: EdgeInsets.only(left: 8),
                         child: Icon(
                           Icons.search,
                           color: Colors.grey,

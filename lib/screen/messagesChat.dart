@@ -10,7 +10,7 @@ class messagesChat extends StatefulWidget {
 }
 
 class _messagesChatState extends State<messagesChat> {
-  final List<String> items = List.generate(100, (index) => 'Item ${index + 1}');
+  final List<String> items = List.generate(12, (index) => 'Item ${index + 1}');
   // List<String> items = ['1,2 ,3 ,4,5'];
 
   List<String> names = [

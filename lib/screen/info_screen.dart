@@ -21,11 +21,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Scaffold(
         body: IntroductionScreen(
             globalBackgroundColor: Color(0xff28293F),
-            scrollPhysics: BouncingScrollPhysics(),
+            scrollPhysics: const BouncingScrollPhysics(),
             pages: [
               PageViewModel(
-                titleWidget: Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                titleWidget: const Padding(
+                  padding: EdgeInsets.only(top: 40),
                   child: Text(
                     'Welcome to Gamofest',
                     textAlign: TextAlign.center,
@@ -35,7 +35,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         color: Colors.white),
                   ),
                 ),
-                bodyWidget: Text(
+                bodyWidget: const Text(
                   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -69,7 +69,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   height: 100,
                   width: 250,
                 ),
-                bodyWidget: Text(
+                bodyWidget: const Text(
                   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since.',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 15, color: Color(0xffafafaf)),
@@ -102,7 +102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             showSkipButton: true,
             showNextButton: false,
             showDoneButton: true,
-            skip: Text(
+            skip: const Text(
               'Skip',
               style: TextStyle(fontSize: 17, color: Color(0xffAFAFAF)),
             ),
@@ -116,7 +116,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => phoneLogin()));
               },
-              child: Text(
+              child: const Text(
                 'Done',
                 style: TextStyle(fontSize: 17, color: Color(0xffAFAFAF)),
               ),

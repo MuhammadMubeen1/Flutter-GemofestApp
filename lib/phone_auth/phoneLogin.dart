@@ -331,7 +331,7 @@ class _phoneLoginState extends State<phoneLogin> {
 
   bool _isValidPhoneNumber(String phoneNumber) {
     // You can add more complex validation logic here
-    return phoneNumber.length >= 11;
+    return phoneNumber.length >= 10;
   }
 
   // Helper method to show an error dialog
